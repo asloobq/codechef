@@ -2,6 +2,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+	/**
+	* Codechef problem link : http://www.codechef.com/MARCH13/problems/TOTR
+	*/
 public class TOTR {
 	//5 qwertyuiopasdfghjklzxcvbnm
 	private static final String ALPHABET_UPP = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

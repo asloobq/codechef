@@ -3,6 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //FireER
+	/**
+	* Codechef problem link: http://www.codechef.com/MARCH13/problems/FIRESC
+	*/
 public class Main {
 
 	static BufferedReader br;

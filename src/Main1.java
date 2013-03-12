@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 public class Main1 {
 
 	/**
-	 * @param args
+	 * CodeChef problem link
+	 * http://www.codechef.com/MARCH13/problems/APPROX
 	 */
 	public static void main(String[] args) {
 
