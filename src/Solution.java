@@ -42,38 +42,47 @@ public class Solution {
 //		String[] numStrings = line.split(" ");
 //		int[] nums = new int[numStrings.length];
     	int[] nums = new int[numbers];
-		
+    	int pairCount = 0;
+    	int rightIndex;
 		for(int index =0; index < numbers; index++) {
 //			nums[index] = Integer.parseInt(numStrings[index]);
 			try {
 				nums[index] = nextInt(br);
+				//compare this number with all previous nums
+				
+				for(rightIndex = index ; rightIndex >= 1; rightIndex--) {
+	    			if( Math.abs(nums[index] - nums[rightIndex]) == diff) {
+	    				pairCount ++;
+	    			}
+	    		}
+				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
-		int answer = getPairs(nums, diff);
-		System.out.println(answer);
+		System.out.println(pairCount);
+//		int answer = getPairs(nums, diff);
+//		System.out.println(answer);
     }
     
-    private static int getPairs(final int[] nums, final int K) {
-    	/*
-    	 * Most straight forward method.
-    	 * Compare each number with every other number to see if the diff is equal to K
-    	 * */
-    	int pairCount = 0;
-    	int leftIndex;
-    	int rightIndex;
-    	for(leftIndex = 0 ; leftIndex < (nums.length -1) ; leftIndex ++) {
-    		for(rightIndex = leftIndex +1; rightIndex < nums.length ; rightIndex++) {
-    			if( Math.abs(nums[leftIndex] - nums[rightIndex]) == K) {
-    				pairCount ++;
-    			}
-    		}
-    	}
-    	return pairCount;
-    }
+//    private static int getPairs(final int[] nums, final int K) {
+//    	/*
+//    	 * Most straight forward method.
+//    	 * Compare each number with every other number to see if the diff is equal to K
+//    	 * */
+//    	int pairCount = 0;
+//    	int leftIndex;
+//    	int rightIndex;
+//    	for(leftIndex = 0 ; leftIndex < (nums.length -1) ; leftIndex ++) {
+//    		for(rightIndex = leftIndex +1; rightIndex < nums.length ; rightIndex++) {
+//    			if( Math.abs(nums[leftIndex] - nums[rightIndex]) == K) {
+//    				pairCount ++;
+//    			}
+//    		}
+//    	}
+//    	return pairCount;
+//    }
     
     /**
      * This method is not written by me. Just using it to make the program run faster.
